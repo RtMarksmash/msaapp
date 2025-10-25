@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.header {
+    background-color: #f3b117;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.main-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #999;
+    border-radius: 10px;
+    width: 220px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f3b117;
+    padding: 8px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cards-container-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-body img {
+    width: 50%;
+    border-radius: 4px;
+}
+
+.card-body p {
+    font-size: 13px;
+    text-align: left;
+    margin: 10px 0 0 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    font-size: 16px;
+}
+
+.create-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.plus {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.mascot {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #f3b117;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pagination .active {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #f3b117;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.footer-icons {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.footer-icons img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #f3b117;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    padding-top: 60px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.header,
+.main-content,
+footer {
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active~.header,
+.sidebar.active~.main-content,
+.sidebar.active~footer {
+    margin-left: 250px;
+}
